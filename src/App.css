@@ -1,0 +1,374 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+  background: #ffffff;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.header nav {
+  display: flex;
+  gap: 28px;
+}
+
+.header nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.header nav a:hover {
+  color: #f4b400;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  min-height: 600px;
+  background: #f4ce14;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  padding: 80px 10%;
+}
+
+.hero-content {
+  max-width: 550px;
+}
+
+.hero h1 {
+  font-family: Georgia, serif;
+  font-size: 64px;
+  margin: 0;
+  color: #333;
+}
+
+.hero h2 {
+  font-family: Georgia, serif;
+  font-size: 38px;
+  margin: 10px 0 25px;
+  color: #333;
+}
+
+.hero p {
+  font-size: 21px;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+.reserve-button {
+  display: inline-block;
+  background: #333;
+  color: white;
+  text-decoration: none;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.reserve-button:hover {
+  background: #555;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lemon-circle {
+  width: 280px;
+  height: 280px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 130px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ================= ABOUT ================= */
+
+.about {
+  background: #ffffff;
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.about h2 {
+  font-family: Georgia, serif;
+  font-size: 42px;
+  margin-bottom: 25px;
+}
+
+.about p {
+  max-width: 900px;
+  margin: auto;
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+/* ================= MENU ================= */
+
+.menu {
+  background: #f5f5f5;
+  padding: 80px 10%;
+}
+
+.menu h2 {
+  text-align: center;
+  font-family: Georgia, serif;
+  font-size: 44px;
+  margin-bottom: 45px;
+}
+
+.menu-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.menu-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.food-image {
+  height: 180px;
+  background: #f4ce14;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 85px;
+}
+
+.menu-card > div:last-child {
+  padding: 25px;
+}
+
+.menu-card h3 {
+  font-family: Georgia, serif;
+  font-size: 25px;
+  margin: 0 0 10px;
+}
+
+.menu-card p {
+  line-height: 1.5;
+  color: #555;
+}
+
+.menu-card .price {
+  color: #d97706;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* ================= BOOKING ================= */
+
+.booking {
+  background: #495e57;
+  padding: 90px 20px;
+  min-height: 700px;
+}
+
+.booking-container {
+  max-width: 650px;
+  margin: auto;
+  background: white;
+  padding: 45px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.booking h2 {
+  text-align: center;
+  font-family: Georgia, serif;
+  font-size: 42px;
+  margin-top: 0;
+  margin-bottom: 35px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid #ccc;
+  border-radius: 7px;
+  font-size: 16px;
+  background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #495e57;
+}
+
+.form-group input:invalid {
+  box-shadow: none;
+}
+
+.booking button {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 8px;
+  background: #f4ce14;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.booking button:hover {
+  background: #e5bd00;
+}
+
+.error {
+  display: block;
+  margin-top: 7px;
+  color: #d32f2f;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.success-message {
+  background: #dff6e4;
+  color: #176b32;
+  border: 1px solid #3aa65c;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* ================= CONTACT ================= */
+
+.contact {
+  background: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-family: Georgia, serif;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.contact p {
+  font-size: 18px;
+  margin: 10px;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 800px) {
+  .header {
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .header nav {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+    padding: 70px 20px;
+  }
+
+  .hero h1 {
+    font-size: 45px;
+  }
+
+  .hero h2 {
+    font-size: 30px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .lemon-circle {
+    width: 200px;
+    height: 200px;
+    font-size: 90px;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-container {
+    padding: 30px 20px;
+  }
+}
